@@ -15,10 +15,15 @@
   },
   "plugins": ["@typescript-eslint", "prettier"],
   "rules": {
-    "prettier/prettier": "error", 
-    "semi": ["error", "never"], 
-    "quotes": ["error", "single"], 
-    "no-unused-vars": "warn", 
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "crlf"
+      }
+    ],
+    "semi": ["error", "never"],
+    "quotes": ["error", "single"],
+    "no-unused-vars": "warn",
     "@typescript-eslint/no-unused-vars": ["warn"]
   }
 }
