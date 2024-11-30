@@ -19,7 +19,6 @@ import { ScrollArea } from './ui/scroll-area'
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableHead,
   TableHeader,
@@ -46,7 +45,7 @@ const MineralCard = async () => {
               </CardHeader>
 
               {/* Conteúdo Principal */}
-              <CardContent className="flex flex-col space-y-">
+              <CardContent className="flex flex-col space-y-4">
                 <div className="flex items-center">
                   <span className="font-bold">Dureza:</span>
                   <span className="ml-2">{mineral.hardness}</span>
