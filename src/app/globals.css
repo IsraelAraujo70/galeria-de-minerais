@@ -68,15 +68,15 @@ body {
   body {
     @apply bg-background text-foreground;
   }
-  
+
   .card {
     @apply bg-card text-card-foreground p-4 rounded-[var(--radius)] shadow-md hover:shadow-lg transition-shadow;
   }
-  
+
   .btn-primary {
     @apply bg-primary text-primary-foreground rounded-[var(--radius)] px-4 py-2 font-semibold hover:bg-primary/90;
   }
-  
+
   .btn-secondary {
     @apply bg-secondary text-secondary-foreground rounded-[var(--radius)] px-4 py-2 font-semibold hover:bg-secondary/90;
   }

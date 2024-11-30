@@ -6,18 +6,20 @@ export interface Mineral {
   hardness: string
   luster: string
   color: string
-  composition: string
-  crystallography: string
-  crystalClass: string
-  habit: string
-  cleavage?: string
-  fracture?: string
-  relativeDensity?: string
-  opticalProperties: string
-  diagnosticProperties: string
-  associations: string
-  occurrence: string
-  uses: string
-  streak?: string
-  image: string
+  composition: string | null
+  crystallography: string | null
+  crystalClass: string | null
+  habit: string | null
+  cleavage?: string | null
+  fracture?: string | null
+  relativeDensity?: string | null | undefined
+  opticalProperties?: string | null
+  diagnosticProperties?: string | null
+  associations?: string | null
+  occurrence?: string | null
+  uses?: string | null
+  streak?: string | null
+  image?: string | null
+  createdAt?: Date
+  updatedAt?: Date
 }

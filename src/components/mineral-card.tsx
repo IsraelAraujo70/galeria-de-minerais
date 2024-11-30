@@ -47,7 +47,8 @@ export default function MineralCard({ minerais }: { minerais: Mineral[] }) {
                     {mineral.name}
                   </CardTitle>
                   <CardDescription className="text-sm text-muted-foreground">
-                    Classe Cristalina: {mineral.crystalClass}
+                    Classe Cristalina:{' '}
+                    {mineral.crystalClass || 'Não especificado'}
                   </CardDescription>
                 </CardHeader>
 
@@ -122,19 +123,25 @@ export default function MineralCard({ minerais }: { minerais: Mineral[] }) {
                     </TableRow>
                     <TableRow>
                       <TableCell className="font-medium">Composição</TableCell>
-                      <TableCell>{mineral.composition}</TableCell>
+                      <TableCell>
+                        {mineral.composition || 'Não especificado'}
+                      </TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell className="font-medium">
                         Cristalografia
                       </TableCell>
-                      <TableCell>{mineral.crystallography}</TableCell>
+                      <TableCell>
+                        {mineral.crystallography || 'Não especificado'}
+                      </TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell className="font-medium">
                         Classe Cristalina
                       </TableCell>
-                      <TableCell>{mineral.crystalClass}</TableCell>
+                      <TableCell>
+                        {mineral.crystalClass || 'Não especificado'}
+                      </TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell className="font-medium">Hábito</TableCell>
@@ -142,17 +149,23 @@ export default function MineralCard({ minerais }: { minerais: Mineral[] }) {
                     </TableRow>
                     <TableRow>
                       <TableCell className="font-medium">Clivagem</TableCell>
-                      <TableCell>{mineral.cleavage}</TableCell>
+                      <TableCell>
+                        {mineral.cleavage || 'Não especificado'}
+                      </TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell className="font-medium">Fratura</TableCell>
-                      <TableCell>{mineral.fracture}</TableCell>
+                      <TableCell>
+                        {mineral.fracture || 'Não especificado'}
+                      </TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell className="font-medium">
                         Densidade Relativa
                       </TableCell>
-                      <TableCell>{mineral.relativeDensity}</TableCell>
+                      <TableCell>
+                        {mineral.relativeDensity || 'Não especificado'}
+                      </TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell className="font-medium">

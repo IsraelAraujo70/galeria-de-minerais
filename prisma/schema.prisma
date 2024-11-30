@@ -9,25 +9,25 @@ generator client {
 
 model Mineral {
   id                   Int      @id @default(autoincrement()) // Unique identifier
-  name                 String // Mineral name
-  classification       String // Classification (e.g., Sulfeto)
-  chemicalFormula      String // Chemical Formula (e.g., FeS2)
-  hardness             String // Hardness (e.g., 6 – 6.5)
-  luster               String // Luster (e.g., Metálico, reluzente)
-  color                String // Color (e.g., Amarelo do latão, pálido)
-  composition          String // Composition (e.g., 46.6% Fe, 53.4% S, etc.)
-  crystallography      String // Crystallography (e.g., Isométrico)
-  crystalClass         String // Crystal Class (e.g., 2/m ¯3)
-  habit                String // Habit (e.g., cristais cúbicos geminados)
-  cleavage             String // Cleavage (e.g., Não tem)
-  fracture             String? // Fracture (nullable if not available)
-  relativeDensity      Float? // Relative Density (e.g., 5.02)
-  opticalProperties    String // Optical Properties (e.g., Isotrópico)
-  diagnosticProperties String // Diagnostic Properties (e.g., Cor, dureza, fragilidade)
-  associations         String // Associations (e.g., calcopirita, esfalerita)
-  occurrence           String // Occurrence (e.g., segregações magmáticas)
-  uses                 String // Uses (e.g., fabricação de H2SO4)
-  streak               String // Streak (e.g., Esverdeado ou preto-acastanhado)
+  name                 String
+  classification       String
+  chemicalFormula      String
+  hardness             String
+  luster               String
+  color                String
+  composition          String?
+  crystallography      String?
+  crystalClass         String?
+  habit                String?
+  cleavage             String?
+  fracture             String?
+  relativeDensity      Float?
+  opticalProperties    String
+  diagnosticProperties String
+  associations         String
+  occurrence           String
+  uses                 String
+  streak               String?
   image                String
   createdAt            DateTime @default(now())
   updatedAt            DateTime @updatedAt
