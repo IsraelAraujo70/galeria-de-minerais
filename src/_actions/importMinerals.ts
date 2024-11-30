@@ -16,7 +16,7 @@ interface Mineral {
   habit: string
   cleavage?: string
   fracture?: string
-  relativeDensity?: string // Recebido como string no JSON
+  relativeDensity?: string
   opticalProperties: string
   diagnosticProperties: string
   associations: string
@@ -26,9 +26,8 @@ interface Mineral {
   image: string
 }
 
-// Função para converter valores de densidade relativa
 function parseRelativeDensity(density: string | undefined): number | null {
-  if (!density) return null // Retorna null se o valor estiver ausente
+  if (!density) return null
 
   // Tenta extrair um número válido (exemplo: "2,05 – 2,09" -> 2.05)
   const match = density.match(/[\d.]+/)

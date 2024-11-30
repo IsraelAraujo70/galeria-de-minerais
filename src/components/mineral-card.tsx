@@ -1,4 +1,6 @@
-import { PrismaClient } from '@prisma/client'
+'use client'
+
+import { motion } from 'framer-motion'
 import {
   Card,
   CardContent,
@@ -24,55 +26,67 @@ import {
   TableHeader,
   TableRow,
 } from './ui/table'
-const prisma = new PrismaClient()
+import { Mineral } from '@/_types/mineral'
 
-const MineralCard = async () => {
-  const minerais = await prisma.mineral.findMany()
+export default function MineralCard({ minerais }: { minerais: Mineral[] }) {
   return (
     <>
       {minerais.map(mineral => (
         <Dialog key={mineral.id}>
           <DialogTrigger asChild>
-            <Card className="border border-muted rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              {/* Header do Card */}
-              <CardHeader>
-                <CardTitle className="text-xl font-semibold text-primary">
-                  {mineral.name}
-                </CardTitle>
-                <CardDescription className="text-sm text-muted-foreground">
-                  Classe Cristalina: {mineral.crystalClass}
-                </CardDescription>
-              </CardHeader>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <Card className="border border-muted rounded-lg shadow-md hover:shadow-lg transition-shadow lg:h-[750px] md:h-[650px] flex flex-col justify-between h-[auto]">
+                {/* Header do Card */}
+                <CardHeader>
+                  <CardTitle className="text-xl font-semibold text-primary">
+                    {mineral.name}
+                  </CardTitle>
+                  <CardDescription className="text-sm text-muted-foreground">
+                    Classe Cristalina: {mineral.crystalClass}
+                  </CardDescription>
+                </CardHeader>
 
-              {/* Conteúdo Principal */}
-              <CardContent className="flex flex-col space-y-4">
-                <div className="flex items-center">
-                  <span className="font-bold">Dureza:</span>
-                  <span className="ml-2">{mineral.hardness}</span>
-                </div>
-                <div className="flex items-center">
-                  <span className="font-bold">Cor:</span>
-                  <span className="ml-2">{mineral.color}</span>
-                </div>
-                <div className="flex items-center">
-                  <span className="font-bold">Fórmula Química:</span>
-                  <span className="ml-2">{mineral.chemicalFormula}</span>
-                </div>
-              </CardContent>
+                {/* Conteúdo Principal */}
+                <CardContent className="flex flex-col space-y-4">
+                  <Table>
+                    <TableBody>
+                      <TableRow>
+                        <TableCell className="font-medium">Dureza:</TableCell>
+                        <TableCell>{mineral.hardness}</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="font-medium">Cor:</TableCell>
+                        <TableCell>{mineral.color}</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="font-medium">
+                          Fórmula Química:
+                        </TableCell>
+                        <TableCell>{mineral.chemicalFormula}</TableCell>
+                      </TableRow>
+                    </TableBody>
+                  </Table>
+                </CardContent>
 
-              {/* Imagem e Rodapé */}
-              <CardFooter className="flex flex-col items-center">
-                {mineral.image && (
-                  <img
-                    src={mineral.image}
-                    alt={mineral.name}
-                    className="w-full h-full object-cover rounded-md"
-                  />
-                )}
-              </CardFooter>
-            </Card>
+                {/* Imagem e Rodapé */}
+                <CardFooter className="flex flex-col items-center">
+                  {mineral.image && (
+                    <img
+                      src={mineral.image}
+                      alt={mineral.name}
+                      className="w-full h-full object-cover rounded-md"
+                    />
+                  )}
+                </CardFooter>
+              </Card>
+            </motion.div>
           </DialogTrigger>
-          <DialogContent className="max-w-2xl max-h-[90vh] overflow-hidden">
+          <DialogContent className="md:max-w-2xl md:max-h-[90vh] overflow-hidden max-h-[80%] max-w-[80%]">
             <DialogHeader>
               <DialogTitle className="text-2xl font-bold text-primary">
                 {mineral.name}
@@ -180,4 +194,3 @@ const MineralCard = async () => {
     </>
   )
 }
-export default MineralCard
