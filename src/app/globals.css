@@ -5,61 +5,60 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
-
 @layer base {
   :root {
-    --background: 0 0% 98%; /* Quase branco */
-    --foreground: 220 15% 15%; /* Cinza escuro */
+    --background: 220 15% 97%; /* Branco com toque de cinza */
+    --foreground: 220 15% 10%; /* Preto acinzentado */
     --card: 0 0% 100%; /* Branco puro */
     --card-foreground: 220 15% 15%; /* Cinza escuro */
     --popover: 0 0% 98%; /* Quase branco */
     --popover-foreground: 220 15% 15%; /* Cinza escuro */
-    --primary: 240 90% 60%; /* Azul brilhante */
+    --primary: 200 80% 40%; /* Azul esverdeado suave */
     --primary-foreground: 0 0% 100%; /* Branco */
-    --secondary: 240 40% 90%; /* Azul claro */
-    --secondary-foreground: 220 15% 15%; /* Cinza escuro */
-    --muted: 0 0% 90%; /* Cinza claro */
-    --muted-foreground: 220 15% 50%; /* Cinza médio */
-    --accent: 340 80% 70%; /* Rosa vibrante */
+    --secondary: 220 25% 80%; /* Azul cinza claro */
+    --secondary-foreground: 0 0% 15%; /* Preto sutil */
+    --muted: 0 0% 85%; /* Cinza claro */
+    --muted-foreground: 0 0% 40%; /* Cinza médio */
+    --accent: 260 60% 55%; /* Roxo moderno */
     --accent-foreground: 0 0% 100%; /* Branco */
-    --destructive: 0 75% 55%; /* Vermelho vibrante */
+    --destructive: 10 75% 50%; /* Vermelho suave */
     --destructive-foreground: 0 0% 100%; /* Branco */
-    --border: 220 10% 80%; /* Cinza claro */
-    --input: 0 0% 90%; /* Cinza claro */
-    --ring: 240 80% 70%; /* Azul claro */
-    --chart-1: 12 70% 50%; /* Vermelho suave */
-    --chart-2: 173 58% 45%; /* Verde suave */
-    --chart-3: 200 50% 40%; /* Azul profundo */
-    --chart-4: 43 75% 65%; /* Amarelo brilhante */
-    --chart-5: 27 80% 70%; /* Laranja */
-    --radius: 0.5rem;
+    --border: 220 15% 80%; /* Cinza suave */
+    --input: 0 0% 90%; /* Fundo de entrada claro */
+    --ring: 200 70% 50%; /* Azul médio */
+    --chart-1: 340 65% 55%; /* Rosa moderno */
+    --chart-2: 120 40% 45%; /* Verde suave */
+    --chart-3: 200 40% 55%; /* Azul suave */
+    --chart-4: 50 70% 65%; /* Amarelo pastel */
+    --chart-5: 220 60% 50%; /* Azul cinzento */
+    --radius: 0.4rem; /* Bordas levemente arredondadas */
   }
   .dark {
-    --background: 220 15% 10%; /* Quase preto */
-    --foreground: 0 0% 98%; /* Quase branco */
-    --card: 220 15% 10%; /* Quase preto */
-    --card-foreground: 0 0% 98%; /* Quase branco */
-    --popover: 220 15% 10%; /* Quase preto */
-    --popover-foreground: 0 0% 98%; /* Quase branco */
-    --primary: 240 70% 50%; /* Azul profundo */
-    --primary-foreground: 0 0% 98%; /* Quase branco */
-    --secondary: 240 30% 30%; /* Azul escuro */
-    --secondary-foreground: 0 0% 98%; /* Quase branco */
-    --muted: 220 10% 20%; /* Cinza escuro */
-    --muted-foreground: 0 0% 90%; /* Cinza claro */
-    --accent: 340 70% 50%; /* Rosa vibrante */
-    --accent-foreground: 0 0% 98%; /* Quase branco */
-    --destructive: 0 70% 40%; /* Vermelho escuro */
-    --destructive-foreground: 0 0% 98%; /* Quase branco */
-    --border: 220 15% 25%; /* Cinza escuro */
-    --input: 220 15% 25%; /* Cinza escuro */
-    --ring: 240 60% 40%; /* Azul escuro */
-    --chart-1: 12 70% 50%; /* Vermelho suave */
-    --chart-2: 173 58% 45%; /* Verde suave */
-    --chart-3: 200 50% 40%; /* Azul profundo */
-    --chart-4: 43 75% 65%; /* Amarelo brilhante */
-    --chart-5: 27 80% 70%; /* Laranja */
-  }  
+    --background: 220 20% 12%; /* Fundo preto fosco */
+    --foreground: 0 0% 92%; /* Texto quase branco */
+    --card: 220 15% 15%; /* Fundo escuro para cartões */
+    --card-foreground: 0 0% 90%; /* Texto claro */
+    --popover: 220 15% 15%; /* Fundo escuro para popovers */
+    --popover-foreground: 0 0% 90%; /* Texto claro */
+    --primary: 200 80% 50%; /* Azul suave vibrante */
+    --primary-foreground: 0 0% 100%; /* Branco */
+    --secondary: 220 30% 40%; /* Cinza escuro com azul */
+    --secondary-foreground: 0 0% 95%; /* Branco claro */
+    --muted: 220 20% 20%; /* Cinza escuro */
+    --muted-foreground: 0 0% 70%; /* Cinza claro */
+    --accent: 260 60% 60%; /* Roxo moderno */
+    --accent-foreground: 0 0% 100%; /* Branco */
+    --destructive: 10 70% 40%; /* Vermelho escuro */
+    --destructive-foreground: 0 0% 100%; /* Branco */
+    --border: 220 20% 25%; /* Cinza escuro */
+    --input: 220 20% 25%; /* Fundo de entrada escuro */
+    --ring: 200 70% 45%; /* Azul elegante */
+    --chart-1: 340 65% 60%; /* Rosa moderno */
+    --chart-2: 120 40% 50%; /* Verde calmo */
+    --chart-3: 200 40% 55%; /* Azul médio */
+    --chart-4: 50 70% 65%; /* Amarelo pastel */
+    --chart-5: 220 60% 50%; /* Azul suave */
+  }
 }
 
 @layer base {
@@ -71,13 +70,14 @@ body {
   }
   
   .card {
-    @apply bg-card text-card-foreground p-4 rounded-[var(--radius)];
+    @apply bg-card text-card-foreground p-4 rounded-[var(--radius)] shadow-md hover:shadow-lg transition-shadow;
   }
+  
   .btn-primary {
-    @apply bg-primary text-primary-foreground rounded-[var(--radius)] px-4 py-2;
+    @apply bg-primary text-primary-foreground rounded-[var(--radius)] px-4 py-2 font-semibold hover:bg-primary/90;
   }
   
   .btn-secondary {
-    @apply bg-secondary text-secondary-foreground rounded-[var(--radius)] px-4 py-2;
+    @apply bg-secondary text-secondary-foreground rounded-[var(--radius)] px-4 py-2 font-semibold hover:bg-secondary/90;
   }
 }

@@ -1,0 +1,25 @@
+-- CreateTable
+CREATE TABLE "Mineral" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "name" TEXT NOT NULL,
+    "classification" TEXT NOT NULL,
+    "chemicalFormula" TEXT NOT NULL,
+    "hardness" TEXT NOT NULL,
+    "luster" TEXT NOT NULL,
+    "color" TEXT NOT NULL,
+    "composition" TEXT NOT NULL,
+    "crystallography" TEXT NOT NULL,
+    "crystalClass" TEXT NOT NULL,
+    "habit" TEXT NOT NULL,
+    "cleavage" TEXT NOT NULL,
+    "fracture" TEXT,
+    "relativeDensity" REAL,
+    "opticalProperties" TEXT NOT NULL,
+    "diagnosticProperties" TEXT NOT NULL,
+    "associations" TEXT NOT NULL,
+    "occurrence" TEXT NOT NULL,
+    "uses" TEXT NOT NULL,
+    "streak" TEXT NOT NULL,
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" DATETIME NOT NULL
+);
